@@ -29,7 +29,7 @@
                                 <!--  Window border and dropshadow  -->
                                 <Border Background="{Binding ForegroundLightBrush, FallbackValue=White}" CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
                                     <Border.Effect>
-                                        <DropShadowEffect Opacity="0.5" ShadowDepth="0" />
+                                        <DropShadowEffect Opacity="0.3" ShadowDepth="0" />
                                     </Border.Effect>
                                 </Border>
 
