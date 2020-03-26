@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="Organizeit.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Organizeit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+    x:Name="AppWindow"
+    Title="Organizeit"
+    Width="800"
+    Height="450"
+    AllowsTransparency="True"
+    Icon="/Images/Icons/organize.png"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!--  Outer border with the dropshadow margin  -->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+
+                            <!--  Main window outline  -->
+                            <Grid>
+
+                                <!--  Window border and dropshadow  -->
+                                <Border Background="{Binding ForegroundLightBrush, FallbackValue=White}" CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}">
+                                    <Border.Effect>
+                                        <DropShadowEffect Opacity="0.5" ShadowDepth="0" />
+                                    </Border.Effect>
+                                </Border>
+
+                                <!--  The main window content  -->
+                                <Grid>
+                                    <Grid.RowDefinitions />
+                                </Grid>
+
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="{Binding TitleHeight}"
+            GlassFrameThickness="0"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}" />
+    </WindowChrome.WindowChrome>
+    <Grid Background="Gray">
+        <!--<svgc:SvgViewbox
+            Height="30"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            OptimizePath="True"
+            Source="/Images/Icons/organize.svg"
+            Stretch="Uniform"
+            Visibility="Visible" />-->
+
+    </Grid>
+</Window>
